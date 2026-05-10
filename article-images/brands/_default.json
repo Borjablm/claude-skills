@@ -1,0 +1,46 @@
+{
+  "name": "default",
+  "display_name": "Default",
+  "site_url": null,
+  "colors": {
+    "accent": "#3B82F6",
+    "dark": "#1F2937",
+    "light": "#F9FAFB",
+    "pop": "#60A5FA",
+    "data_palette": [
+      "#3B82F6",
+      "#10B981",
+      "#F59E0B",
+      "#EF4444",
+      "#8B5CF6",
+      "#06B6D4"
+    ],
+    "benchmark": "#6B7280"
+  },
+  "fonts": {
+    "family": "sans-serif",
+    "stack": ["Helvetica", "Arial", "sans-serif"]
+  },
+  "attribution": {
+    "template": "Source: {source}",
+    "color_alpha": 0.6,
+    "position": "bottom-left",
+    "font_size": 10
+  },
+  "watermark": {
+    "enabled": false,
+    "text": null,
+    "position": "bottom-right"
+  },
+  "title_card": {
+    "background": "white",
+    "accent_block": {
+      "enabled": true,
+      "side": "left",
+      "width_pct": 0.06
+    },
+    "title_color": "dark",
+    "subtitle_color": "dark",
+    "subtitle_alpha": 0.85
+  }
+}

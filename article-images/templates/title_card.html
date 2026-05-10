@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{{title}}</title>
+<style>
+  :root {
+    --accent: %ACCENT%;
+    --dark: %DARK%;
+    --light: %LIGHT%;
+    --pop: %POP%;
+    --font-family: %FONT_STACK%;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-family);
+    background: white;
+    color: var(--dark);
+    height: 100vh;
+    display: flex;
+    align-items: stretch;
+  }
+  .accent-bar {
+    width: 8%;
+    background: var(--accent);
+  }
+  .content {
+    flex: 1;
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .eyebrow {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: 24px;
+  }
+  .title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--dark);
+    max-width: 90%;
+  }
+  .subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--dark);
+    opacity: 0.75;
+    margin-top: 24px;
+    max-width: 80%;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 16px;
+    color: var(--dark);
+    opacity: 0.65;
+  }
+  .brand {
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+  <div class="accent-bar"></div>
+  <div class="content">
+    <div>
+      <div class="eyebrow">{{eyebrow}}</div>
+      <h1 class="title">{{title}}</h1>
+      <p class="subtitle">{{subtitle}}</p>
+    </div>
+    <div class="footer">
+      <div class="brand">%BRAND_NAME%</div>
+      <div class="domain">%WATERMARK%</div>
+    </div>
+  </div>
+</body>
+</html>

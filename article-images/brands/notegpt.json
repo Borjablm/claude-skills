@@ -1,0 +1,47 @@
+{
+  "name": "notegpt",
+  "display_name": "NoteGPT",
+  "site_url": "https://notegpt.com",
+  "colors": {
+    "accent": "#7f57f1",
+    "dark": "#565D66",
+    "light": "#f9f8fd",
+    "pop": "#f9c578",
+    "data_palette": [
+      "#7f57f1",
+      "#f9c578",
+      "#0693e3",
+      "#00d084",
+      "#ffc46b",
+      "#565D66"
+    ],
+    "benchmark": "#888888"
+  },
+  "fonts": {
+    "family": "sans-serif",
+    "stack": ["Inter", "Helvetica", "Arial", "sans-serif"]
+  },
+  "attribution": {
+    "template": "Source: {source} | Analysis by NoteGPT.com",
+    "color_alpha": 0.6,
+    "position": "bottom-left",
+    "font_size": 10
+  },
+  "watermark": {
+    "enabled": true,
+    "text": "notegpt.com",
+    "position": "bottom-right",
+    "alpha": 0.6
+  },
+  "title_card": {
+    "background": "white",
+    "accent_block": {
+      "enabled": true,
+      "side": "left",
+      "width_pct": 0.06
+    },
+    "title_color": "dark",
+    "subtitle_color": "dark",
+    "subtitle_alpha": 0.85
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "quecafe",
+  "display_name": "QueCafe",
+  "site_url": "https://quecafe.info",
+  "_note": "Placeholder profile. Update colors and fonts to match the QueCafe brand before first use, or fall back to _default.json.",
+  "colors": {
+    "accent": "#6F4E37",
+    "dark": "#2C1810",
+    "light": "#F5EFE6",
+    "pop": "#C68B59",
+    "data_palette": [
+      "#6F4E37",
+      "#C68B59",
+      "#A67B5B",
+      "#D4A373",
+      "#2C1810",
+      "#8B6F47"
+    ],
+    "benchmark": "#8B6F47"
+  },
+  "fonts": {
+    "family": "sans-serif",
+    "stack": ["Inter", "Helvetica", "Arial", "sans-serif"]
+  },
+  "attribution": {
+    "template": "Fuente: {source} | quecafe.info",
+    "color_alpha": 0.6,
+    "position": "bottom-left",
+    "font_size": 10
+  },
+  "watermark": {
+    "enabled": true,
+    "text": "quecafe.info",
+    "position": "bottom-right",
+    "alpha": 0.6
+  },
+  "title_card": {
+    "background": "light",
+    "accent_block": {
+      "enabled": true,
+      "side": "left",
+      "width_pct": 0.06
+    },
+    "title_color": "dark",
+    "subtitle_color": "dark",
+    "subtitle_alpha": 0.85
+  }
+}

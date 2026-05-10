@@ -1,0 +1,22 @@
+# Generated artifacts
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# Environment
+.env
+.env.local
+
+# Brand swatch / preview artifacts (created locally, not source)
+brands/*-swatch.png
+brands/*-preview.png
+
+# Test outputs
+.tmp/
+.cache/

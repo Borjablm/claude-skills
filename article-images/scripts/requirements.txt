@@ -1,0 +1,6 @@
+matplotlib>=3.7
+Pillow>=10.0
+requests>=2.31
+python-dotenv>=1.0
+numpy>=1.24
+html2image>=2.0

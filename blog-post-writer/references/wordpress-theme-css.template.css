@@ -1,0 +1,140 @@
+/* ============================================
+   Blog Article Component Styles — TEMPLATE
+   Add to: Appearance > Customize > Additional CSS
+
+   Replace the brand-prefix and colors below with your own.
+   The blog-post-writer skill produces HTML that references
+   classes like .yourbrand-takeaways, .yourbrand-table, etc.
+
+   Convention: pick a 3-letter slug for your brand and prefix
+   every class with it (e.g. acm-takeaways for "Acme").
+   ============================================ */
+
+:root {
+  /* Map to your theme's variables, or set fallbacks here.
+     Most modern WordPress themes (Twenty Twenty-Three onwards)
+     expose --wp--preset--color--<name>. */
+  --yb-accent: var(--wp--preset--color--primary, #2563eb);
+  --yb-text: var(--wp--preset--color--secondary, #1F2937);
+  --yb-text-muted: #4b5563;
+  --yb-bg-subtle: var(--wp--preset--color--tertiary, #F9FAFB);
+  --yb-bg-accent: #DBEAFE;
+  --yb-border: #E5E7EB;
+}
+
+/* Key Takeaways callout */
+.yb-takeaways {
+  background: var(--yb-bg-accent);
+  border-left: 4px solid var(--yb-accent);
+  padding: 20px 24px;
+  margin: 24px 0 32px 0;
+  border-radius: 0 4px 4px 0;
+}
+.yb-takeaways h3 {
+  margin: 0 0 12px 0;
+  color: var(--yb-accent);
+  font-size: 0.95em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.yb-takeaways ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.yb-takeaways ul li {
+  margin-bottom: 8px;
+}
+
+/* Neutral callout */
+.yb-callout {
+  background: var(--yb-bg-subtle);
+  border-left: 4px solid var(--yb-text);
+  padding: 16px 20px;
+  margin: 20px 0;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.95em;
+}
+
+/* Data table */
+.yb-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+.yb-table th,
+.yb-table td {
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--yb-border);
+}
+.yb-table th {
+  background: var(--yb-bg-accent);
+  font-weight: 600;
+  font-size: 0.9em;
+  color: var(--yb-text);
+}
+
+/* Feature card grid */
+.yb-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 20px 0;
+}
+@media (max-width: 600px) {
+  .yb-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.yb-card {
+  padding: 16px;
+  background: var(--yb-bg-subtle);
+  border-radius: 6px;
+  border: 1px solid var(--yb-border);
+  border-top: 3px solid var(--yb-accent);
+}
+.yb-card strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--yb-text);
+}
+.yb-card p {
+  margin: 0;
+  font-size: 0.93em;
+  color: var(--yb-text-muted);
+}
+
+/* Process flow / pipeline */
+.yb-pipeline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 20px 0;
+  align-items: stretch;
+}
+@media (max-width: 600px) {
+  .yb-pipeline {
+    flex-direction: column;
+  }
+}
+.yb-stage {
+  flex: 1;
+  min-width: 140px;
+  padding: 14px 16px;
+  background: var(--yb-bg-accent);
+  border-left: 3px solid var(--yb-accent);
+  margin-bottom: 8px;
+}
+.yb-stage strong {
+  display: block;
+  font-size: 0.85em;
+  color: var(--yb-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+}
+
+/* H2 spacing */
+.yb-h2 {
+  padding-top: 32px;
+}

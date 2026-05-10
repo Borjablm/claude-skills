@@ -1,0 +1,48 @@
+{
+  "name": "ecomm",
+  "display_name": "ecomm.design",
+  "site_url": "https://ecomm.design",
+  "_note": "Palette anchored on the electric blue (#0072F4) found in their existing Elementor popup CSS, plus a complementary set tuned for chart legibility against a clean white background. Adjust if the actual brand guidelines differ.",
+  "colors": {
+    "accent": "#0072F4",
+    "dark": "#1A1F2E",
+    "light": "#F4F7FA",
+    "pop": "#4A90F0",
+    "data_palette": [
+      "#0072F4",
+      "#FF6B35",
+      "#10B981",
+      "#A855F7",
+      "#F59E0B",
+      "#1A1F2E"
+    ],
+    "benchmark": "#6B7280"
+  },
+  "fonts": {
+    "family": "sans-serif",
+    "stack": ["Inter", "Helvetica", "Arial", "sans-serif"]
+  },
+  "attribution": {
+    "template": "Source: {source} | ecomm.design",
+    "color_alpha": 0.6,
+    "position": "bottom-left",
+    "font_size": 10
+  },
+  "watermark": {
+    "enabled": true,
+    "text": "ecomm.design",
+    "position": "bottom-right",
+    "alpha": 0.6
+  },
+  "title_card": {
+    "background": "white",
+    "accent_block": {
+      "enabled": true,
+      "side": "left",
+      "width_pct": 0.06
+    },
+    "title_color": "dark",
+    "subtitle_color": "dark",
+    "subtitle_alpha": 0.85
+  }
+}

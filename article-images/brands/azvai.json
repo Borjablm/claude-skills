@@ -1,0 +1,47 @@
+{
+  "name": "azvai",
+  "display_name": "Azvai",
+  "site_url": "https://azvai.com",
+  "colors": {
+    "accent": "#F1FFD2",
+    "dark": "#3B3B3B",
+    "light": "#F6F6F6",
+    "pop": "#D4FF8C",
+    "data_palette": [
+      "#A8E6A3",
+      "#F4B184",
+      "#D4FF8C",
+      "#F1FFD2",
+      "#3B3B3B",
+      "#888888"
+    ],
+    "benchmark": "#888888"
+  },
+  "fonts": {
+    "family": "sans-serif",
+    "stack": ["DM Sans", "Helvetica", "Arial", "sans-serif"]
+  },
+  "attribution": {
+    "template": "Source: {source}, analysis by azvai.com",
+    "color_alpha": 0.6,
+    "position": "bottom-left",
+    "font_size": 10
+  },
+  "watermark": {
+    "enabled": true,
+    "text": "azvai.com",
+    "position": "bottom-right",
+    "alpha": 0.6
+  },
+  "title_card": {
+    "background": "white",
+    "accent_block": {
+      "enabled": true,
+      "side": "left",
+      "width_pct": 0.06
+    },
+    "title_color": "dark",
+    "subtitle_color": "dark",
+    "subtitle_alpha": 0.85
+  }
+}

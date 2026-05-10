@@ -1,0 +1,49 @@
+{
+  "name": "ai-tutor",
+  "display_name": "AI-tutor.ai",
+  "site_url": "https://ai-tutor.ai",
+  "colors": {
+    "accent": "#2563eb",
+    "dark": "#1F2937",
+    "light": "#F9FAFB",
+    "pop": "#3B82F6",
+    "data_palette": [
+      "#2563eb",
+      "#60A5FA",
+      "#93C5FD",
+      "#A5B4FC",
+      "#34D399",
+      "#FBBF24",
+      "#F87171",
+      "#9CA3AF"
+    ],
+    "benchmark": "#6B7280"
+  },
+  "fonts": {
+    "family": "sans-serif",
+    "stack": ["DM Sans", "Inter", "Helvetica", "Arial", "sans-serif"]
+  },
+  "attribution": {
+    "template": "Source: {source}, analysis by ai-tutor.ai",
+    "color_alpha": 0.6,
+    "position": "bottom-left",
+    "font_size": 10
+  },
+  "watermark": {
+    "enabled": true,
+    "text": "ai-tutor.ai",
+    "position": "bottom-right",
+    "alpha": 0.6
+  },
+  "title_card": {
+    "background": "white",
+    "accent_block": {
+      "enabled": true,
+      "side": "left",
+      "width_pct": 0.06
+    },
+    "title_color": "dark",
+    "subtitle_color": "dark",
+    "subtitle_alpha": 0.85
+  }
+}

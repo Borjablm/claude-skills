@@ -1,0 +1,48 @@
+{
+  "name": "lumination",
+  "display_name": "Lumination",
+  "site_url": "https://lumination.ai",
+  "_note": "Placeholder profile. Update colors and fonts to match the Lumination brand before first use, or fall back to _default.json.",
+  "colors": {
+    "accent": "#5B6CFF",
+    "dark": "#0F172A",
+    "light": "#F8FAFC",
+    "pop": "#818CF8",
+    "data_palette": [
+      "#5B6CFF",
+      "#10B981",
+      "#F59E0B",
+      "#EC4899",
+      "#06B6D4",
+      "#0F172A"
+    ],
+    "benchmark": "#64748B"
+  },
+  "fonts": {
+    "family": "sans-serif",
+    "stack": ["Inter", "Helvetica", "Arial", "sans-serif"]
+  },
+  "attribution": {
+    "template": "Source: {source} | lumination.ai",
+    "color_alpha": 0.6,
+    "position": "bottom-left",
+    "font_size": 10
+  },
+  "watermark": {
+    "enabled": true,
+    "text": "lumination.ai",
+    "position": "bottom-right",
+    "alpha": 0.6
+  },
+  "title_card": {
+    "background": "white",
+    "accent_block": {
+      "enabled": true,
+      "side": "left",
+      "width_pct": 0.06
+    },
+    "title_color": "dark",
+    "subtitle_color": "dark",
+    "subtitle_alpha": 0.85
+  }
+}
