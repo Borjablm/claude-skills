@@ -38,9 +38,9 @@ conventions so subsequent inspections inherit your accumulated knowledge.
 ### `locate`
 Find the key documents in the project folder.
 
-1. Scan the project root and sub-folders (typical: `SOLICITUD`, `XUSTIFICACION`,
-   `modificacion*`, `CEs/`, `Certificados/`, `DOCUMENTACION/`, or your local
-   equivalents).
+1. Scan the project root and sub-folders (typical: `APPLICATION/`,
+   `FINAL_REPORT/`, `amendments/`, `CERTIFICATES/`, `DOCS/`, or whatever
+   naming convention your projects use).
 2. Identify the **approved final scope** document — typically a final report or
    acceptance document signed off after award. Priority order:
    1. Most recent signed final report
@@ -97,10 +97,10 @@ The skill assumes (but does not require) a project layout like:
 │   ├── CLAUDE.md            # project-specific context (optional)
 │   ├── LEARNINGS.md         # accumulated lessons (optional)
 │   ├── patterns.json        # heuristics (optional)
-│   ├── SOLICITUD/           # initial application
-│   ├── XUSTIFICACION/       # final justification report
-│   ├── modificaciones/      # scope amendments
-│   ├── CEs/                 # certificates
+│   ├── APPLICATION/        # initial application
+│   ├── FINAL_REPORT/       # final justification report
+│   ├── amendments/         # scope amendments
+│   ├── CERTIFICATES/       # certificates of conformity
 │   └── ...
 ```
 
@@ -111,10 +111,9 @@ rather than requiring a specific structure.
 
 ## Background
 
-This skill was originally built for a Galician public-subsidy inspection workflow
-(IFO/AFO reconciliations on aquaculture and food-processing facilities) and
-generalised for public release. The principles transfer cleanly to any
-inspection where you need to reconcile what was approved against what was
-actually built or supplied.
+Originally built for a regional public-subsidy inspection workflow on
+aquaculture and food-processing facilities, then generalised for public release.
+The principles transfer cleanly to any inspection where you need to reconcile
+what was approved against what was actually built or supplied.
 
 License: MIT. Created by [azvai.com](https://azvai.com).

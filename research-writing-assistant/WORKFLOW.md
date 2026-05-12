@@ -1,4 +1,4 @@
-# How to Use: blog-post-writer
+# How to Use: research-writing-assistant
 
 End-to-end SEO article generator. From keyword to publish-ready article with deep research, adversarial writer/editor drafting, and SEO meta.
 
@@ -56,7 +56,7 @@ CTA link: https://example.com/podcast-course
 
 ### Reconfigure brand voice
 ```
-Reconfigure the blog-post-writer brand profile
+Reconfigure the research-writing-assistant brand profile
 ```
 Reruns only the rounds you choose (brand profile, guidelines, examples, or all).
 

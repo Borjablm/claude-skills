@@ -79,7 +79,7 @@ Unsplash photos are free for commercial and editorial use. Attribution is techni
 
 The script generates the attribution markdown automatically. **Always paste it into the article** (typically as a caption under the image, or in a "Photo credits" section at the bottom).
 
-## Workflow when called from blog-post-writer
+## Workflow when called from research-writing-assistant
 
 In Stage 5, if the article needs mid-body imagery and no charts are present:
 

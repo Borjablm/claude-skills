@@ -8,7 +8,7 @@ version: 1.0.0
 
 Generate a comprehensive SEO audit report from Google Search Console data. Analyzes 8 key areas and produces actionable recommendations.
 
-**Non-commodity content lens.** Per Google's Search Central Live Toronto (April 2026) and the March 2026 core update's Information Gain weighting, content that reads like a polished restatement of the SERP is increasingly filtered, deindexed, or replaced by AI Overviews. This audit treats commodity-content risk as a primary diagnosis, not a side note. Read `references/non-commodity-content.md` (in the blog-post-writer skill) for the full principles, recipes, and content-type tiering.
+**Non-commodity content lens.** Per Google's Search Central Live Toronto (April 2026) and the March 2026 core update's Information Gain weighting, content that reads like a polished restatement of the SERP is increasingly filtered, deindexed, or replaced by AI Overviews. This audit treats commodity-content risk as a primary diagnosis, not a side note. Read `references/non-commodity-content.md` (in the research-writing-assistant skill) for the full principles, recipes, and content-type tiering.
 
 ## What This Audit Covers
 
@@ -188,7 +188,7 @@ Process the collected data according to the rules in each analysis section below
 | Page | Risk | Signals (count) | Triggered Signals | Recommended Recipe |
 ```
 
-`Recommended Recipe` references the recipes in `references/non-commodity-content.md` of the blog-post-writer skill (or equivalent text). Recommend by name and with a concrete first step. Examples:
+`Recommended Recipe` references the recipes in `references/non-commodity-content.md` of the research-writing-assistant skill (or equivalent text). Recommend by name and with a concrete first step. Examples:
 
 - "Recipe 1 — pull last 90 days of GSC search-terms for this URL, identify the 5 highest-impression queries, run a hands-on test or analysis answering each query specifically. Title becomes '[topic]: what we found in our [analysis type]'."
 - "Recipe 4 — interview one named practitioner from [adjacent network/community]. 20-minute call, 3-4 quotes, drop into existing sections."

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{{title}}</title>
+<style>
+  :root {
+    --accent: %ACCENT%;
+    --dark: %DARK%;
+    --light: %LIGHT%;
+    --pop: %POP%;
+    --font-family: %FONT_STACK%;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-family);
+    background: var(--light);
+    color: var(--dark);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Brand accent bar on the left */
+  .accent-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 6%;
+    background: var(--accent);
+  }
+  /* Subtle decorative shape, kept lightweight and abstract */
+  .accent-blob {
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 55%;
+    height: 140%;
+    background: var(--accent);
+    border-radius: 50%;
+    opacity: 0.55;
+    filter: blur(4px);
+  }
+  h1.title {
+    position: relative;
+    z-index: 1;
+    margin-left: 12%;
+    padding-right: 8%;
+    max-width: 70%;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--dark);
+    letter-spacing: -0.01em;
+  }
+</style>
+</head>
+<body>
+  <div class="accent-bar"></div>
+  <div class="accent-blob"></div>
+  <h1 class="title">{{title}}</h1>
+</body>
+</html>

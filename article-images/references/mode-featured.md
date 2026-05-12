@@ -4,7 +4,7 @@ Branded title-card / featured image. Use when an article needs a featured image 
 
 ## When to use
 
-- Every blog-post-writer article needs a featured image — call this mode in Stage 5 unless the article already has a chart or stock image suitable for featured use
+- Every research-writing-assistant article needs a featured image — call this mode in Stage 5 unless the article already has a chart or stock image suitable for featured use
 - Title cards for LinkedIn (use `--aspect square`)
 - Quick OG image for any article without bespoke imagery
 
@@ -55,7 +55,7 @@ This is intentionally simple. The visual interest comes from the brand colors an
 
 Generate `og` and `square` together for any article that will also be posted to LinkedIn — easier than re-running later.
 
-## Calling from blog-post-writer
+## Calling from research-writing-assistant
 
 In Stage 5 (Polish & Deliver), after the article is finalized:
 

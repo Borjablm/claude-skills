@@ -198,7 +198,7 @@ Use **AskUserQuestion** to collect:
 
 ### Write Config
 
-Save `skill_config.json` to the skill directory (`.claude/skills/blog-post-writer/skill_config.json`):
+Save `skill_config.json` to the skill directory (`.claude/skills/research-writing-assistant/skill_config.json`):
 
 ```json
 {

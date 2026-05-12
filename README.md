@@ -8,11 +8,11 @@ A growing hub of [Claude Code](https://claude.com/claude-code) skills built for 
 
 | Skill | What it does |
 |---|---|
-| [`article-images`](./article-images/) | Programmatic charts, stat cards, branded title images, and stock photo search. Replaces AI image generation for structured visuals at ~97% less compute and cost. |
-| [`blog-post-writer`](./blog-post-writer/) | End-to-end SEO content pipeline: research, competitor analysis, outline planning, adversarial writer/editor draft, meta generation. Built for sustainability content but works for any domain. |
-| [`gsc-audit`](./gsc-audit/) | Comprehensive Google Search Console audit framework. Striking-distance keywords, content decay, cannibalization, CTR optimization, brand vs non-brand health. |
-| [`wordpress-publish`](./wordpress-publish/) | Publish articles to WordPress via REST API. Multi-site support. Natural follow-up to blog-post-writer. |
-| [`field-inspection-prep`](./field-inspection-prep/) | Prepare technical field inspections for sustainability certifications, subsidy reconciliations, supplier audits. Locates documents, reconciles invoices against approved scopes, generates inspection checklists. |
+| [`article-images`](./article-images/) | Programmatic charts, stat cards, branded title images, and open-license stock photos for sustainability reports and research-led articles. Replaces AI image generation for structured visuals at ~97% less compute and energy. Pairs with research-writing-assistant. |
+| [`research-writing-assistant`](./research-writing-assistant/) | End-to-end research and writing pipeline for sustainability and ESG publishers: brief, deep research, competitor analysis, outline planning, adversarial writer/editor draft, SEO meta. Pairs with article-images and gsc-audit. |
+| [`gsc-audit`](./gsc-audit/) | Google Search Console audit framework for sustainability publishers and consultants. Striking-distance keywords, content decay, cannibalization, CTR optimization. Useful before writing (find targets) and after publishing (track shifts). |
+| [`wordpress-publish`](./wordpress-publish/) | Multi-site WordPress REST API publisher for consultancies maintaining several brand or client sites. Featured image upload, category/tag resolution, draft or live publish. Natural endpoint for research-writing-assistant. |
+| [`field-inspection-prep`](./field-inspection-prep/) | Prepare technical field inspections for sustainability certifications, subsidy reconciliations, and supplier audits. Locates approved-scope documents, reconciles invoices against approved scope per period, generates inspection checklists. |
 
 ## Install a skill
 
@@ -33,7 +33,7 @@ Each skill's own README has setup steps (env vars, dependencies, config).
 Most skills ship with a default brand profile or template. To make them yours:
 
 1. **For `article-images`**: run the setup wizard to create a brand JSON. `python scripts/setup_brand.py` walks through colors, fonts, and attribution.
-2. **For `blog-post-writer`**: copy `references/brand-profile.template.md` to `references/brand-profile.md` and fill in your voice. Or paste a writing sample on first run; the skill builds a profile from it.
+2. **For `research-writing-assistant`**: copy `references/brand-profile.template.md` to `references/brand-profile.md` and fill in your voice. Or paste a writing sample on first run; the skill builds a profile from it.
 3. **For others**: see the per-skill README.
 
 ## License

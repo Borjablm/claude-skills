@@ -7,7 +7,7 @@ Branded analytics chart from data. Use when an article references a number, tren
 - Analytics articles built on public datasets (GSC, BigQuery, Cloudflare bot logs, Anthropic Economic Index, etc.)
 - Original research / surveys
 - Cross-account or cross-period comparisons
-- Any non-commodity section in a blog-post-writer outline that's anchored on data
+- Any non-commodity section in a research-writing-assistant outline that's anchored on data
 
 ## Workflow
 

@@ -1,6 +1,6 @@
 ---
 name: wordpress-publish
-description: Publish articles to a WordPress site via the REST API. Multi-site (azvai, quecafe, ecomm, ai-tutor, notegpt). Creates posts as drafts or published, uploads featured images, sets categories/tags. Use when the user asks to publish, push, upload, or send an article to WordPress. Natural follow-up to blog-post-writer Stage 5.
+description: Publish articles to a WordPress site via the REST API. Multi-site (azvai, quecafe, ecomm, ai-tutor, notegpt). Creates posts as drafts or published, uploads featured images, sets categories/tags. Use when the user asks to publish, push, upload, or send an article to WordPress. Natural follow-up to research-writing-assistant Stage 5.
 license: MIT
 requires_secrets:
   - WP_<SLUG>_URL          # one set per site
@@ -16,18 +16,18 @@ You publish articles to a configured WordPress site using the REST API. Multi-si
 
 Run `python scripts/publish.py list-sites` to see what's set up. Each site is identified by a lowercase slug (e.g. `azvai`, `quecafe`, `ecomm`). Slug is derived from the env vars `WP_<UPPERCASE_SLUG>_URL`, `_USER`, `_APP_PASSWORD`.
 
-The blog-post-writer brand profile slug should match the site slug (so `azvai` brand → `--site azvai`). For ecomm.design the convention is `ecomm`.
+The research-writing-assistant brand profile slug should match the site slug (so `azvai` brand → `--site azvai`). For ecomm.design the convention is `ecomm`.
 
 ## Inputs
 
 The user points you at an article. Typically one of:
-- A directory from `blog-post-writer` containing `article.html` + `meta.json` + `titles.md`
+- A directory from `research-writing-assistant` containing `article.html` + `meta.json` + `titles.md`
 - A single HTML or Markdown file
 - An explicit title + body
 
 Ask if any of these are missing: **target site** (slug), **title**, **status** (`draft` or `publish`, default `draft`), **featured image** (optional path), **categories/tags** (optional names).
 
-If the working dir is from blog-post-writer, infer the site from `brief.json.brand_profile` (which equals the brand slug, which equals the site slug). Confirm with the user before publishing.
+If the working dir is from research-writing-assistant, infer the site from `brief.json.brand_profile` (which equals the brand slug, which equals the site slug). Confirm with the user before publishing.
 
 ## Workflow
 
@@ -48,7 +48,7 @@ If the user asks to update a post they previously published, use `scripts/publis
 - **Always pass `--site`.** The legacy single-site fallback (`WP_URL`/`WP_USER`/`WP_APP_PASSWORD` without prefix) still works for backwards compat, but for multi-site setups always pass an explicit slug to avoid publishing to the wrong site.
 - **Default to draft.** Only `--status publish` when the user explicitly says "publish live" / "publish it" / "go live".
 - **Never publish without showing the user the final title + meta description first.**
-- **Strip `<html>/<head>/<body>` wrappers** if present before sending — WP expects a content fragment (see `blog-post-writer/references/wordpress-output.md`).
+- **Strip `<html>/<head>/<body>` wrappers** if present before sending — WP expects a content fragment (see `research-writing-assistant/references/wordpress-output.md`).
 - **Preserve the `<style>` block** if the article uses per-article CSS mode.
 
 ## Script reference

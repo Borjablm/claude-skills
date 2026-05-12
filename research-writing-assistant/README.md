@@ -1,4 +1,4 @@
-# blog-post-writer v1.0.0
+# research-writing-assistant v1.0.0
 
 End-to-end SEO article generator for any brand. From keyword to publish-ready article with deep research, adversarial writer/editor drafting, and SEO meta generation.
 
@@ -6,10 +6,10 @@ Supports list posts, how-tos, comparisons, reviews, and explainers. Includes a b
 
 ## Installation
 
-1. Download `blog-post-writer-v1.0.0.zip`
+1. Download `research-writing-assistant-v1.0.0.zip`
 2. In Claude Code, run:
    ```
-   /install-skill blog-post-writer-v1.0.0.zip
+   /install-skill research-writing-assistant-v1.0.0.zip
    ```
 3. The installer will validate the skill and copy it to your skills folder.
 
@@ -37,7 +37,7 @@ Setup results are saved to the skill folder and reused for all future runs. Say 
 ## Usage
 
 ```
-/blog-post-writer
+/research-writing-assistant
 ```
 
 Or trigger naturally:
