@@ -3,7 +3,7 @@
 ## Overview
 Gather article parameters from the user, scrape competitor content, and identify content gaps for the research phase.
 
-**Read `references/non-commodity-content.md` before starting Stage 1.** Brief capture is the only point in the pipeline where the brand can supply first-hand material (case studies, proprietary data, named experts). Without it, the article will default to commodity by Stage 4 — too late to fix.
+Brief capture is the only point in the pipeline where the brand can supply first-hand material (case studies, proprietary data, named experts). Without it, the article will default to commodity by Stage 4 — too late to fix.
 
 ## Step 1: Gather Brief
 
@@ -30,7 +30,7 @@ Use AskUserQuestion to collect all parameters. Ask in 1-2 rounds maximum.
 | `writing_samples` | null | Text samples to emulate style from (raw text pasted directly, or file path. Multiple samples separated by `---`) |
 | `brand_profile` | null | Brand profile override: file path to a custom brand profile markdown. If null, reads `references/brand-profile.md` from the skill directory. |
 | `editorial_notes` | null | Special instructions from the user |
-| `non_commodity_assets` | null | First-hand material the brand can supply: case studies, internal data, named experts, surveys, methodologies, customer stories, A/B test results, support-ticket patterns. Free-form text or list. **Strongly recommended** — articles without at least one non-commodity asset default to commodity content (see `references/non-commodity-content.md`). |
+| `non_commodity_assets` | null | First-hand material the brand can supply: case studies, internal data, named experts, surveys, methodologies, customer stories, A/B test results, support-ticket patterns. Free-form text or list. **Strongly recommended** — articles without at least one non-commodity asset default to commodity content. |
 | `word_count_per_section` | auto-calculated | Word budget per list item/section |
 | `number_of_sections` | null (auto-derived from competitors in Stage 3) | Target section count. `null` means "let the planner decide based on competitor analysis." |
 

@@ -4,7 +4,7 @@ Shared quality rules for writer and editor sub-agents. These apply to ALL sectio
 
 ## Non-Commodity Content (binding rule)
 
-Before applying anything below, both writer and editor must read `references/non-commodity-content.md`. The article must satisfy Google's 2026 quality bar — unique, specific, authentic — or it ships with a known commodity-risk flag. Three operational rules:
+The article must satisfy Google's 2026 quality bar — unique, specific, authentic — or it ships with a known commodity-risk flag. Three operational rules:
 
 1. **Specific over generic.** "Many users" → cut or replace with "68% of 412 surveyed users". "Experts say" → cut or replace with "Jane Doe, who runs Acme, says". Any unsupported generic claim in a section flagged as a non-commodity anchor (`non_commodity_anchor` non-null in the outline) is a defect — flag with `[NON_COMMODITY DRIFT]`.
 2. **Information Gain per section.** Every section should add at least one element competitors don't have: a named source, a specific number, a documented incident, an original methodology detail. Sections that read like polished restatements of the SERP are commodity by definition.
