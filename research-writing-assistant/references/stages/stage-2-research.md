@@ -4,7 +4,7 @@
 
 Multi-source deep-dive research. Runs as a **Sonnet sub-agent** (tool-heavy, doesn't need Opus reasoning). Collects raw source material for the planner across web, YouTube, and X.
 
-**Information Gain framing.** Per Google's March 2026 core update, content quality is now scored heavily on whether the page adds knowledge that doesn't already exist on the SERP. Research must hunt for **non-commodity** material: named experts, specific instances, first-hand stories, original data, counterintuitive findings. Restating what competitors already say is not Information Gain. See `references/non-commodity-content.md`.
+**Information Gain framing.** Per Google's March 2026 core update, content quality is now scored heavily on whether the page adds knowledge that doesn't already exist on the SERP. Research must hunt for **non-commodity** material: named experts, specific instances, first-hand stories, original data, counterintuitive findings. Restating what competitors already say is not Information Gain.
 
 ## Sub-Agent Setup
 

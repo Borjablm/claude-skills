@@ -67,7 +67,7 @@ Before assembling `article.md`, run the Sullivan test on the whole article:
 
 > "Could a competent SEO write a near-identical article in 2 hours from the SERP alone?"
 
-If yes, the article is commodity. Surface this to the user with the option to add a non-commodity section before publishing (point them at the recipes in `references/non-commodity-content.md`). Note in `consistency-report.md`:
+If yes, the article is commodity. Surface this to the user with the option to add a non-commodity section before publishing. Note in `consistency-report.md`:
 
 - `non_commodity_sections`: count of sections containing at least one named entity, original number, attributed quote, or specific incident
 - `commodity_risk_level`: low / medium / high
