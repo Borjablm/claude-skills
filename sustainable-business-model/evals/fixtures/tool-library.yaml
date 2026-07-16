@@ -1,0 +1,134 @@
+meta:
+  name: Community tool library
+  currency: EUR
+  periods: {count: 3, unit: year, start: 2028}
+  question: When does membership income cover the coordinator, and what has to be true?
+
+# Drafted from tool-library-inputs/. Deliberately mid-flight: the drivers are taken
+# from the founder's notes, and the grant application in the same folder disagrees
+# with three of them. Nobody has reconciled the two documents yet — which is the
+# state most real projects are actually in.
+
+drivers:
+  members:
+    label: Members
+    values: [200, 400, 600]
+    unit: count
+    grade: C
+    source: founder notes — 120 in the six-month pilot, 600 by year three
+
+  borrows_per_member:
+    label: Borrows per member per year
+    value: 5
+    unit: count
+    grade: C
+    source: founder notes, from the community centre pilot
+
+  membership_fee:
+    label: Membership fee
+    value: 40
+    unit: currency
+    grade: C
+    source: founder notes
+
+  tool_stock_value:
+    label: Tool stock value
+    values: [9000, 12000, 15000]
+    unit: currency
+    grade: C
+    source: founder notes — about 9,000 initially, half donated
+
+  repair_rate:
+    label: Repair and replacement, share of stock value per year
+    value: 0.15
+    unit: percent
+    grade: C
+    source: founder notes, "maybe 15%"
+
+  coordinator_cost:
+    label: Coordinator (part-time)
+    values: [14000, 14000, 28000]
+    unit: currency
+    grade: B
+    source: founder notes — 14,000/yr for 20 hours a week; doubles at two sites
+
+  space_cost:
+    label: Space
+    values: [0, 0, 0]
+    unit: currency
+    grade: partner
+    deal_stage: exploration
+    source: founder notes — "the council might give us the space for free, we've
+            asked but nothing signed"
+
+  grant:
+    label: Circular Communities Fund
+    values: [15000, 10000, 0]
+    unit: currency
+    grade: partner
+    deal_stage: exploration
+    source: grant application, 25,000 over two years tapering to zero
+
+  co2_per_borrow_kg:
+    label: CO2e avoided per borrow
+    value: 3.5
+    unit: mass
+    grade: C
+    source: founder notes — "a drill is about 3.5 kg of CO2e to manufacture
+            according to the guidance we read"
+
+lines:
+  borrows:
+    label: Borrows per year
+    formula: members * borrows_per_member
+    category: impact
+    unit: count
+
+  membership_income:
+    label: Membership income
+    formula: members * membership_fee
+    category: earned
+
+  fund:
+    label: Grant income
+    formula: grant
+    category: grant
+    restricted: true
+
+  repairs:
+    label: Repair and replacement
+    formula: tool_stock_value * repair_rate
+    category: cost
+
+  coordinator:
+    label: Coordinator
+    formula: coordinator_cost
+    category: cost
+
+  space:
+    label: Space
+    formula: space_cost
+    category: cost
+
+  co2_avoided:
+    label: CO2e avoided (tonnes)
+    formula: borrows * co2_per_borrow_kg / 1000
+    category: impact
+    unit: mass
+
+outputs:
+  cost_per_borrow:
+    label: Full cost per borrow
+    formula: total_costs / borrows
+    unit: currency
+
+thresholds:
+  - name: Membership covers the coordinator
+    test: membership_income >= coordinator
+    meaning: The application promises this within two years.
+  - name: Grant-free operation
+    test: total_earned >= total_costs
+    meaning: Earned income covers everything.
+  - name: Reserves never negative
+    test: cumulative_net >= 0
+    meaning: The library does not run out of money on the way.

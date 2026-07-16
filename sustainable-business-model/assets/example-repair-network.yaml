@@ -1,0 +1,201 @@
+meta:
+  name: Repair café network
+  currency: EUR
+  periods: {count: 4, unit: year, start: 2027}
+  question: When do we stop needing grants, and what does that require?
+
+drivers:
+  sites:
+    label: Repair cafés open
+    values: [2, 4, 7, 10]
+    unit: count
+    grade: C
+    source: founder plan — one new site per quarter from Y2
+    note: Not a market fact. This is the plan, so it is a decision, not a discovery.
+
+  repairs_per_site_week:
+    label: Repairs per café per week
+    values: [10, 12, 14, 14]
+    unit: count
+    grade: C
+    source: founder estimate from the pilot site
+    note: Pilot ran with the most engaged volunteers. Expect regression as it scales.
+
+  weeks_open:
+    label: Weeks open per year
+    value: 46
+    unit: count
+    grade: A
+    source: operating calendar, closed Aug + Christmas
+
+  avg_donation:
+    label: Average donation per repair
+    values: [7.5, 8, 8, 8]
+    unit: currency
+    grade: C
+    source: pilot till data, small n
+    note: Donation, not price. Highly sensitive to framing at the point of repair.
+
+  parts_cost_per_repair:
+    label: Parts cost per repair
+    value: 3.2
+    unit: currency
+    grade: B
+    source: {note: "pilot purchasing records, 2026", date: "2026-06"}
+
+  coordinator_fte:
+    label: Coordinator FTE
+    values: [1.0, 1.5, 2.5, 3.5]
+    unit: count
+    grade: C
+    source: founder plan
+
+  coordinator_cost:
+    label: Cost per coordinator FTE
+    value: 34000
+    unit: currency
+    grade: B
+    source: sector salary benchmark + employer costs
+
+  site_cost_year:
+    label: Space + utilities per site per year
+    value: 4800
+    unit: currency
+    grade: B
+    source: signed lease at pilot site, assumed comparable
+
+  overhead_rate:
+    label: Overhead on direct costs
+    value: 0.18
+    unit: percent
+    grade: C
+    source: current actual, unverified against full cost recovery
+    note: Full cost recovery is a live argument in this sector. If the true rate is
+          higher, grant applications are under-recovering.
+
+  grant_core:
+    label: Core grant secured
+    values: [90000, 70000, 40000, 0]
+    unit: currency
+    grade: A
+    source: signed 3-year grant agreement, tapering by design
+    deal_stage: signed
+
+  grant_new:
+    label: New grant (in application)
+    values: [0, 0, 30000, 30000]
+    unit: currency
+    grade: partner
+    deal_stage: exploration
+    source: municipal circular-economy fund, conversation only
+    note: Not committed. Base case should not depend on it.
+
+  co2_per_repair_kg:
+    label: CO2e avoided per repair
+    value: 24
+    unit: mass
+    grade: B
+    source: {note: "EU JRC study on small appliance lifetime extension", url: "https://example.org/jrc"}
+    note: Sector average across appliance types. Our mix may differ — an adaptation
+          worth stating rather than hiding.
+
+lines:
+  repairs:
+    label: Repairs completed
+    formula: sites * repairs_per_site_week * weeks_open
+    category: impact
+    unit: count
+
+  donation_income:
+    label: Repair donations
+    formula: repairs * avg_donation
+    category: earned
+
+  workshop_income:
+    label: Paid repair workshops
+    values: [4000, 9000, 16000, 22000]
+    category: earned
+    note: Unsourced. A plan, not a forecast.
+
+  grants:
+    label: Grants
+    formula: grant_core + grant_new
+    category: grant
+    restricted: true
+
+  parts:
+    label: Parts and consumables
+    formula: repairs * parts_cost_per_repair
+    category: cost
+
+  staff:
+    label: Coordinators
+    formula: coordinator_fte * coordinator_cost
+    category: cost
+
+  space:
+    label: Space and utilities
+    formula: sites * site_cost_year
+    category: cost
+
+  overhead:
+    label: Overhead
+    formula: (parts + staff + space) * overhead_rate
+    category: cost
+
+  co2_avoided:
+    label: CO2e avoided (tonnes)
+    formula: repairs * co2_per_repair_kg / 1000
+    category: impact
+    unit: mass
+
+outputs:
+  cost_per_repair:
+    label: Full cost per repair
+    formula: total_costs / repairs
+    unit: currency
+
+  subsidy_per_repair:
+    label: Grant subsidy per repair
+    formula: total_grant / repairs
+    unit: currency
+
+  cost_per_tonne_co2:
+    label: Net cost per tonne CO2e avoided
+    formula: (total_costs - total_earned) / co2_avoided
+    unit: currency
+    note: The number a climate funder will ask for. Negative means it pays for itself.
+
+  earned_cost_coverage:
+    label: Earned income as share of costs
+    formula: total_earned / total_costs
+    unit: percent
+    is_target: true
+
+thresholds:
+  - name: Grant-free operation
+    test: total_earned >= total_costs
+    meaning: Earned income covers full costs. The point of the whole exercise.
+  - name: Grant dependency under 30%
+    test: grant_dependency < 0.30
+    meaning: Most funders read above this as fragile.
+  - name: Reserves not negative
+    test: cumulative_net >= 0
+    meaning: The network never runs out of money on the way.
+
+scenarios:
+  no_new_grant:
+    why: The municipal fund is a conversation, not a commitment. Base case should survive without it.
+    overrides:
+      grant_new: 0
+  pilot_regression:
+    why: Volunteer throughput and donation levels regress as the network scales beyond
+         the founding site — the decay the plan does not model.
+    overrides:
+      repairs_per_site_week: [10, 10, 10, 10]
+      avg_donation: [7.5, 7, 6.5, 6.5]
+  full_cost_recovery:
+    why: If the true overhead rate is the sector's typical 25-30% rather than our
+         current 18%, grant applications have been under-recovering.
+    overrides:
+      overhead_rate: 0.28

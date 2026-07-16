@@ -1,0 +1,51 @@
+{
+  "skill_name": "sustainable-business-model",
+  "fixture_note": "Everything here is synthetic. `fixtures/tool-library-inputs/` is a founder's notes plus an extract from their grant application; the two documents deliberately disagree on three things (borrows per member 5 vs 3, year-three members 600 vs 500, CO2e per borrow 3.5 kg vs 28 kg). `fixtures/tool-library.yaml` is a spec drafted from the notes only, so the contradictions are live and unreconciled — the state most real projects are in.",
+  "evals": [
+    {
+      "id": 0,
+      "name": "build-from-a-folder",
+      "prompt": "We're setting up a community tool library and I need a financial model before the funder meeting. Everything I have is in fixtures/tool-library-inputs/ — my notes from the founding meeting and a bit of the grant application we already sent. The question they'll ask is when we stop needing the grant.",
+      "expected_output": "Reads the folder, builds a spec with categorised lines (earned/grant/cost/impact), leaves drivers honestly ungraded where nothing supports them, stages the unsigned council space and grant as partner-dependent rather than base-case certainties, and asks the founder to confirm the revenue sentence rather than inventing one.",
+      "files": ["fixtures/tool-library-inputs/"],
+      "assertions": [
+        "Produces a spec that validates (model.py --check passes)",
+        "Every income and cost line carries a category, so grant dependency is derived rather than hand-computed",
+        "The council space and the grant are marked partner-dependent / deal_stage exploration rather than treated as certain, given neither is signed",
+        "Drivers that nothing in the folder supports are left ungraded or graded C, not given invented sources",
+        "Asks the user to confirm something material (the revenue sentence, the target, or which of the two documents is current) rather than silently deciding",
+        "Reports when the venture stops needing the grant, or says plainly that it does not"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "evidence-contradictions",
+      "prompt": "Check fixtures/tool-library.yaml against the documents in fixtures/tool-library-inputs/ — is anything in the model contradicted by our own paperwork? Don't change my numbers, just tell me what to look at.",
+      "expected_output": "Surfaces the three planted contradictions between the founder's notes and the grant application (borrow rate, member count, CO2e per borrow), presents them as things for the user to reconcile, and does not silently re-grade or overwrite the spec.",
+      "files": ["fixtures/tool-library.yaml", "fixtures/tool-library-inputs/"],
+      "assertions": [
+        "Surfaces the borrows-per-member contradiction (notes say 5 per year, the grant application says 3)",
+        "Surfaces the CO2e-per-borrow contradiction (notes say 3.5 kg, the grant application says 28 kg — an 8x gap)",
+        "Surfaces the year-three membership contradiction (notes say 600, the application says 500)",
+        "Quotes the documents rather than only naming them, so the user can judge each one",
+        "Does not silently change the spec's values or grades — the user asked what to look at, not for a rewrite",
+        "Notes that the grant application is the document already sent to the funder, making the disagreement consequential"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "explore-and-deliver",
+      "prompt": "For fixtures/tool-library.yaml: which assumptions actually decide whether this works, and can you give me an interactive report plus a spreadsheet I can send to the funder?",
+      "expected_output": "Runs sensitivity before proposing research, produces the self-verified HTML report and an xlsx with live formulas, grades and sources.",
+      "files": ["fixtures/tool-library.yaml"],
+      "assertions": [
+        "Runs a sensitivity computation and reports a short prioritised list rather than discussing all nine drivers equally",
+        "Ranks by evidence weakness as well as leverage, not leverage alone",
+        "Produces a report.html that reports its compiled JavaScript verified against the Python results",
+        "The report is self-contained (no external script, style or font requests)",
+        "Produces an .xlsx whose calculated lines are live formulas rather than pasted values",
+        "Flags the unsigned council space and grant as the model's main external dependency"
+      ]
+    }
+  ]
+}
