@@ -20,3 +20,6 @@ brands/*-preview.png
 # Test outputs
 .tmp/
 .cache/
+
+# Skill eval workspaces (test runs, not source)
+*-workspace/
