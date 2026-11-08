@@ -1,0 +1,11 @@
+facility_id,facility,field,value,source_url,source_type,source_date,accessed,verdict,note
+recycler1,Example Recycler AS,exists,"Registered company, org. no. 000000000, active",https://register.example/000000000,register,2026-11-08,2026-11-08,confirmed,Register shows current status only; read date used as source_date
+recycler1,Example Recycler AS,operating,Operating: plant running and buying material in 2026,https://example-recycler.example/news/2026-plant,press_release,2026-05-10,2026-11-08,confirmed,
+recycler1,Example Recycler AS,process,Chemical depolymerisation of PA6 to caprolactam,https://example-recycler.example/process,company,2025,2026-11-08,confirmed,Company's own wording
+recycler1,Example Recycler AS,polymers,PA6 only; PA66 refused,https://example-recycler.example/faq,company,2025,2026-11-08,confirmed,
+recycler1,Example Recycler AS,capacity,"15,961 t post-consumer waste collected in 2025, all feedstock, not nets only",https://example-recycler.example/report-2025.pdf,company,2026-03,2026-11-08,confirmed,"Basis collected, not plant capacity; quote on p.12"
+recycler1,Example Recycler AS,capacity,"35,000 to 40,000 t/yr input",,model,,,wrong,"Run A. A collection target, now on hold, not capacity"
+recycler1,Example Recycler AS,input_spec,No contamination limit published,https://example-recycler.example/faq,company,2025,2026-11-08,unverifiable,Ask on the call
+recycler1,Example Recycler AS,terms,No prices or gate fees published,https://example-recycler.example/faq,company,2025,2026-11-08,unverifiable,Ask on the call
+closed1,Closed Nets SAS,exists,"Company SIREN 000000000, created 2019",https://register.example/000000000,register,2019-05-15,2026-11-08,confirmed,
+closed1,Closed Nets SAS,operating,"Not operating. Liquidation opened 2025-09-02, struck off 2026-10-31",https://gazette.example/notice,register,2026-10-31,2026-11-08,confirmed,Both AI runs listed it as a live recycler
