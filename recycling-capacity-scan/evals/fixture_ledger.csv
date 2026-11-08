@@ -1,0 +1,19 @@
+facility_id,facility,field,value,source_url,source_type,source_date,accessed,verdict,note
+good,Good Recycler,exists,Company registered and trading,https://example.org/register/good,register,2026-03,2026-11-08,confirmed,
+good,Good Recycler,operating,Plant running in 2026,https://example.org/good/news,press_release,2026-06-01,2026-11-08,confirmed,
+good,Good Recycler,capacity,"12,000 t/yr input, all feedstock",https://example.org/good/plant,company,2025-09,2026-11-08,confirmed,nameplate input; nets are a share
+good,Good Recycler,input_spec,"Lead and floats removed, PA6 only",https://example.org/good/spec,company,2026-01,2026-11-08,confirmed,
+ghost,Ghost Nets Ltd,exists,Large Dutch net recycler,,model,,,invented,No trace in any register or web source
+stale,Stale Plant,exists,Company exists,https://example.org/stale,company,2019-05,2026-11-08,confirmed,
+stale,Stale Plant,operating,Plant closed in 2023,https://example.org/stale/closure,news,2023-11,2026-11-08,outdated,
+nobasis,No Basis Co,exists,Company exists,https://example.org/nobasis,company,2026-02,2026-11-08,confirmed,
+nobasis,No Basis Co,operating,Running,https://example.org/nobasis/news,company,2026-02,2026-11-08,confirmed,
+nobasis,No Basis Co,capacity,5000 t,https://example.org/nobasis/cap,company,2026-02,2026-11-08,confirmed,
+agg,Aggregator Only,exists,Listed in a directory,https://example.org/directory,aggregator,2025-01,2026-11-08,confirmed,
+modelconf,Model Confirmed,exists,The model said so,,model,,,confirmed,
+nodate,No Date Co,exists,Company exists,https://example.org/nodate,company,,2026-11-08,confirmed,
+closed,Closed But Confirmed SAS,exists,Company registered 2019,https://example.org/register/closed,register,2026-10,2026-11-08,confirmed,
+closed,Closed But Confirmed SAS,operating,"Not operating. Liquidation opened 2025-09-02, struck off 2026-10-31",https://example.org/gazette/closed,register,2026-10-31,2026-11-08,confirmed,the run listed it as a live recycler
+yarn,Yarn Maker SA,exists,Yarn group,https://example.org/yarn,company,2026,2026-11-08,confirmed,
+yarn,Yarn Maker SA,operating,Operating,https://example.org/yarn,company,2026,2026-11-08,confirmed,
+yarn,Yarn Maker SA,process,Takes fishing nets,https://example.org/yarn,company,2026,2026-11-08,wrong,its recycled lines are polyester textile waste
