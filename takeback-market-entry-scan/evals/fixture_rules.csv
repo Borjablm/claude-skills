@@ -1,0 +1,10 @@
+rule_id,jurisdiction,topic,claim,instrument,provision,source_url,source_type,in_force_from,accessed,verdict,note
+ok,IE,levy,Landfill levy EUR 85 per tonne,S.I. No. 398 of 2023,Reg. 2,https://www.irishstatutebook.ie/eli/2023/si/398/made/en/print,legislation,2023-09-01,2026-11-21,confirmed,no later amendment found
+model-confirmed,IE,levy,Landfill levy EUR 75 per tonne,Landfill Levy Regulations,,,model,2013-07-01,2026-11-21,confirmed,
+no-instrument,NI,permit,Carriers must register,,,https://www.daera-ni.gov.uk/x,legislation,1999-11-01,2026-11-21,confirmed,
+rate-no-date,NI,permit,Upper tier fee GBP 191,Waste fees regulations,reg. 2,https://www.daera-ni.gov.uk/y,regulator_guidance,,2026-11-21,confirmed,
+as-made,IE,permit,Class 10 residual cap 7500 t,S.I. No. 821 of 2007,Third Schedule,https://www.irishstatutebook.ie/eli/2007/si/821/made/en/print,legislation,2008-03-27,2026-11-21,confirmed,
+future,UK,levy,Landfill tax GBP 136.70 per tonne,Finance Act 1996,s.42,https://www.gov.uk/z,legislation,2027-04-01,2026-11-21,confirmed,amended by annual rate orders
+bad-topic,EU,stuff,Something,Reg X,Art 1,https://eur-lex.europa.eu/a,official_journal,2020-01-01,2026-11-21,confirmed,
+contents,NI,permit,Carriers register with NIEA,SR 1999/362,reg. 2,https://www.legislation.gov.uk/nisr/1999/362/contents,legislation,1999-11-01,2026-11-21,confirmed,revised version
+loophole,IE,levy,Recovery levy EUR 10 per tonne,S.I. No. 441 of 2024,Reg. 3,https://www.irishstatutebook.ie/eli/2024/si/441/made/en/print,legislation,2024-09-01,2026-11-21,confirmed,this S.I. is itself the amendment

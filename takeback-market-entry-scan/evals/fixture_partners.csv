@@ -1,0 +1,13 @@
+org_id,org,field,value,source_url,source_type,source_date,accessed,verdict,note
+good,Good Reuse CIC,exists,Active company,https://find-and-update.company-information.service.gov.uk/company/1,register,2026-05,2026-11-21,confirmed,
+good,Good Reuse CIC,operating,News Oct 2026,https://good.example/news,company,2026-10,2026-11-21,confirmed,
+good,Good Reuse CIC,material,Takes carpet tiles,https://good.example/tiles,company,2026-10,2026-11-21,confirmed,
+dissolved,Gone CIC,exists,Registered 2008,https://find-and-update.company-information.service.gov.uk/company/2,register,2026-09,2026-11-21,confirmed,
+dissolved,Gone CIC,operating,Dissolved on 5 September 2026,https://find-and-update.company-information.service.gov.uk/company/2,register,2026-09-05,2026-11-21,confirmed,
+undated,Undated Ltd,exists,Website live,https://undated.example,company,undated,2026-11-21,confirmed,
+nomaterial,Shop Ltd,exists,Active,https://find-and-update.company-information.service.gov.uk/company/3,register,2026-01,2026-11-21,confirmed,
+nomaterial,Shop Ltd,operating,News Nov 2026,https://shop.example,company,2026-11,2026-11-21,confirmed,
+modelonly,Model Co,exists,Said by the chatbot,,model,,2026-11-21,confirmed,
+invented,Made Up Ltd,exists,No trace,,model,,2026-11-21,invented,
+old,Old Name Ltd,exists,Active,https://find-and-update.company-information.service.gov.uk/company/9,register,2026-02,2026-11-21,confirmed,
+old,Old Name Ltd,claim_check,A same-name company dissolved in 2015 is a different entity,https://find-and-update.company-information.service.gov.uk/company/8,register,2015-03,2026-11-21,confirmed,
