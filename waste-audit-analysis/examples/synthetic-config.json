@@ -1,0 +1,20 @@
+{
+  "areas": [
+    {"name": "riverside", "file": "synthetic/riverside.csv", "unit": "kg", "period_days": 7, "weights_are": "period_total", "population": 41200},
+    {"name": "hillside", "file": "synthetic/hillside.csv", "unit": "g", "period_days": 7, "weights_are": "period_total", "population": 28900}
+  ],
+  "id_col": "id",
+  "type_col": "type",
+  "household_type": "household",
+  "people_col": "people",
+  "income_col": "income_idr",
+  "categories": {
+    "kitchen": "organic", "garden": "organic", "manure": "organic",
+    "plastic_bag": "plastic", "sachet": "plastic", "pet_bottle": "plastic",
+    "paper": "paper", "glass": "glass", "metal": "metal", "diapers": "other", "other": "other"
+  },
+  "income_bands": [["low", 0, 800000], ["middle", 800000, 1200001], ["high", 1200001, 1e12]],
+  "benchmark_kg_cap_day": [0.3, 0.7],
+  "benchmark_source": "illustrative range for this synthetic test only; replace with a cited reference for your study area",
+  "adjustments": []
+}
