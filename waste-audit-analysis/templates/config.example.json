@@ -1,0 +1,23 @@
+{
+  "areas": [
+    {"name": "Area A", "file": "area_a.csv", "unit": "kg", "period_days": 7, "weights_are": "period_total", "population": 50000},
+    {"name": "Area B", "file": "area_b.csv", "unit": "g", "period_days": 7, "weights_are": "period_total", "population": 30000}
+  ],
+  "id_col": "id",
+  "type_col": "type",
+  "household_type": "household",
+  "people_col": "people",
+  "income_col": "income",
+  "categories": {
+    "food": "organic", "garden": "organic",
+    "plastic_bag": "plastic", "sachet": "plastic", "pet_bottle": "plastic", "other_rigid_plastic": "plastic",
+    "paper_card": "paper", "glass": "glass", "metal": "metal", "textiles": "textiles", "diapers": "other", "other": "other"
+  },
+  "recyclable_groups": ["plastic", "paper", "glass", "metal"],
+  "income_bands": [],
+  "benchmark_kg_cap_day": null,
+  "benchmark_source": null,
+  "adjustments": [],
+  "nonhousehold_counts": {},
+  "density": {}
+}

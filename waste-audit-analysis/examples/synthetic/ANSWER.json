@@ -1,0 +1,27 @@
+{
+  "truth_clean_data": {
+    "riverside": {
+      "households": 120,
+      "kg_cap_day": 0.1034,
+      "kg_hh_day": 0.4345
+    },
+    "hillside": {
+      "households": 120,
+      "kg_cap_day": 0.1028,
+      "kg_hh_day": 0.4299
+    }
+  },
+  "planted_problems": [
+    "riverside: two household sizes typed as 4.2 (a mean filled in for missing values)",
+    "riverside: row R121 duplicates R021 (copy-paste); 121 rows for 120 households",
+    "riverside: R071 kitchen waste is 12x typical (outlier, likely a typing error)",
+    "riverside: R034 paper weight typed with a decimal comma (text, not a number)",
+    "hillside: all weights in grams (header note), riverside in kg",
+    "hillside: two households with income \"n/a\"",
+    "both: manure is zero in every household (category not present or not sorted)",
+    "both: generation about 0.12 kg/cap/day, far below typical Indonesian or SE Asian references (organics under-captured)",
+    "both: non-household units sampled, but no counts of schools, shops, stalls or health posts in the wards",
+    "both: no container volumes, so density cannot be computed"
+  ],
+  "days": 7
+}
