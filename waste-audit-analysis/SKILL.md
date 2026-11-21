@@ -55,8 +55,8 @@ Outputs: `generation.csv`, `composition_category.csv`, `composition_group.csv`, 
 
 The checks are the value of this skill. In the Indonesian test the ones that mattered were:
 - **Units** differed between the two sub-districts (kg and g).
-- **Per-capita average**: the workbook's own cells used total weight over total people (0.100 and 0.144 kg/cap/day); the delivered report said 0.11 and 0.15, and the files don't show how those were derived. The mean of each household's per-person rate gives 0.113 and 0.156, so there the averaging method alone moved the result by 8 to 13% (in a synthetic test set it moved it by 2%). Report both and say which you use (ratio of totals is the one that scales up correctly to population).
-- **Under-capture**: 0.10 to 0.14 kg/cap/day is far below typical figures, mostly because food scraps go to animals, compost or fires before collection. The original team later added an estimate for missed organics. That is a legitimate judgement call, and it belongs in `adjustments` with its reason, not typed into a cell.
+- **Per-capita average**: total weight over total people gave 0.100 and 0.144 kg/cap/day; the mean of each household's per-person rate gave 0.113 and 0.156. The averaging method alone moved the result by 8 to 13% there (2% in a synthetic test set). Both are defensible. Report both and say which you use (ratio of totals is the one that scales up correctly to population).
+- **Under-capture**: 0.10 to 0.14 kg/cap/day is far below typical figures, mostly because food scraps go to animals, compost or fires before collection. The study team added an estimate for missed organics in a later revision, a legitimate judgement call. In this skill such an estimate goes in `adjustments` with its reason and source, so the report shows measured and adjusted figures side by side.
 - **Non-household scale-up** needed outside counts (business registers, school lists) and unit rates the audit didn't have.
 
 ## Step 5. Benchmark
